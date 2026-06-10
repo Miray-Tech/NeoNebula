@@ -12,7 +12,7 @@ export class LibRepoStructure extends BaseMavenRepo {
     public static readonly MCLANGUAGE_ARTIFACT = 'mclanguage'
     public static readonly LOWCODELANGUAGE_ARTIFACT = 'lowcodelanguage'
 
-    public static readonly NEOFORGE_GROUP = 'net.neoforged'
+    public static readonly NEOFORGE_GROUP = 'releases.net.neoforged'
     public static readonly NEOFORGE_ARTIFACT = 'neoforge'
 
     constructor(
