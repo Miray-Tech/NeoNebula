@@ -65,7 +65,7 @@ export class NeoForgeResolver extends BaseResolver {
         this.generatedFiles = [
             {
                 name: 'universal jar',
-                group: LibRepoStructure.NEOFORGE_GROUP,
+                group: LibRepoStructure.NEOFORGE_REMOTE_GROUP,
                 artifact: LibRepoStructure.NEOFORGE_ARTIFACT,
                 version: this.neoforgeVersion,
                 classifiers: ['universal'],
@@ -73,7 +73,7 @@ export class NeoForgeResolver extends BaseResolver {
             },
             {
                 name: 'client jar',
-                group: LibRepoStructure.NEOFORGE_GROUP,
+                group: LibRepoStructure.NEOFORGE_REMOTE_GROUP,
                 artifact: LibRepoStructure.NEOFORGE_ARTIFACT,
                 version: this.neoforgeVersion,
                 classifiers: ['client'],
@@ -119,7 +119,7 @@ export class NeoForgeResolver extends BaseResolver {
             NeoForgeResolver.logger.debug('NeoForge installer not found locally, initializing download..')
             await libRepo.downloadArtifactByComponents(
                 this.REMOTE_REPOSITORY,
-                LibRepoStructure.NEOFORGE_REMOTE_GROUP,
+                LibRepoStructure.NEOFORGE_GROUP,
                 LibRepoStructure.NEOFORGE_ARTIFACT,
                 this.neoforgeVersion, 'installer', 'jar'
             )
