@@ -119,7 +119,7 @@ export class NeoForgeResolver extends BaseResolver {
             NeoForgeResolver.logger.debug('NeoForge installer not found locally, initializing download..')
             await libRepo.downloadArtifactByComponents(
                 this.REMOTE_REPOSITORY,
-                LibRepoStructure.NEOFORGE_GROUP,
+                LibRepoStructure.NEOFORGE_REMOTE_GROUP,
                 LibRepoStructure.NEOFORGE_ARTIFACT,
                 this.neoforgeVersion, 'installer', 'jar'
             )
