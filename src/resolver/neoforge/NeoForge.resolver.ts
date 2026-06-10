@@ -28,7 +28,7 @@ export class NeoForgeResolver extends BaseResolver {
     private static readonly logger = LoggerUtil.getLogger('NeoForgeResolver')
     private static readonly WILDCARD_NEOFORM_VERSION = '${formVersion}'
 
-    protected readonly REMOTE_REPOSITORY = 'https://maven.neoforged.net/'
+    protected readonly REMOTE_REPOSITORY = 'https://maven.neoforged.net/releases/'
 
     protected repoStructure: RepoStructure
     private generatedFiles: GeneratedFile[] | undefined
@@ -65,7 +65,7 @@ export class NeoForgeResolver extends BaseResolver {
         this.generatedFiles = [
             {
                 name: 'universal jar',
-                group: LibRepoStructure.NEOFORGE_REMOTE_GROUP,
+                group: LibRepoStructure.NEOFORGE_GROUP,
                 artifact: LibRepoStructure.NEOFORGE_ARTIFACT,
                 version: this.neoforgeVersion,
                 classifiers: ['universal'],
@@ -73,7 +73,7 @@ export class NeoForgeResolver extends BaseResolver {
             },
             {
                 name: 'client jar',
-                group: LibRepoStructure.NEOFORGE_REMOTE_GROUP,
+                group: LibRepoStructure.NEOFORGE_GROUP,
                 artifact: LibRepoStructure.NEOFORGE_ARTIFACT,
                 version: this.neoforgeVersion,
                 classifiers: ['client'],
